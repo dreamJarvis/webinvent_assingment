@@ -5,6 +5,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 // import type { User } from "./user";
 
 type User = {
+	id: number;
 	email: String;
 	password: String;
 	token: string;
@@ -27,9 +28,17 @@ export const userApi = createApi({
 			}),
 			invalidatesTags: ["user"],
 		}),
+		getUserSignUpInfo: builder.mutation<User, any>({
+			query: (userInfo: User) => ({
+				url: `register`,
+				method: "POST",
+				body: userInfo,
+			}),
+			invalidatesTags: ["user"],
+		}),
 	}),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetUserInfoMutation } = userApi;
+export const { useGetUserInfoMutation, useGetUserSignUpInfoMutation } = userApi;

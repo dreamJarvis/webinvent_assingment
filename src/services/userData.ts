@@ -2,25 +2,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-	loginDetails: {
+	authDetails: {
+		id: null,
 		token: null,
 		email: null,
 		password: null,
 	},
-	// userData: {
-	// 	id: null,
-	// 	firstName: null,
-	// 	lastName: null,
-	// 	avatar: null,
-	// },
-	// data: [],
 };
 
 export const userDataSlice = createSlice({
 	name: "userData",
 	initialState,
 	reducers: {
-		addUserLoginData: (state, action) => {
+		addUserAuthData: (state, action) => {
 			const newUserData = {
 				email: action.payload.email,
 				password: action.payload.password,
@@ -29,11 +23,11 @@ export const userDataSlice = createSlice({
 
 			// console.log("action : ", action);
 			// console.log("newUserData : ", newUserData);
-			state.loginDetails = { ...newUserData };
+			state.authDetails = { ...state.authDetails, ...newUserData };
 			// console.log("state.loginDetails : ", state.loginDetails);
 		},
 	},
 });
 
-export const { addUserLoginData } = userDataSlice.actions;
+export const { addUserAuthData } = userDataSlice.actions;
 export default userDataSlice.reducer;

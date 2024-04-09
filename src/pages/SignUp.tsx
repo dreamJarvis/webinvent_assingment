@@ -1,35 +1,21 @@
-import React from 'react';
+/** @format */
+
+import { useGetUserSignUpInfoMutation } from "../services/user";
+import FormAction from "../components/FormAction";
 
 const SignUp = () => {
-   return (
-      <div className="login-form">
-         <form className="input-form">
-            <div className="input-form-container">
-               <div className="input-containers">
-                  <label className="input-name">
-                     Sign-Up
-                  </label>
-                  <input
-                     className='input-name'
-                     type='text'
-                     placeholder="username"
-                  />
-                  <input
-                     className='input-email'
-                     type='email'
-                     placeholder="email"
-                  />
-                  <input
-                     className='input-password'
-                     type="password"
-                     placeholder="password"
-                  />
-               </div>
-               <button className='btn-submit'>Sign-up</button>
-            </div>
-         </form>
-      </div>
-   );
+	const [userSignUpInfo, { data, status, ...restOfData }] =
+		useGetUserSignUpInfoMutation();
+
+	return (
+		<FormAction
+			userInfo={userSignUpInfo}
+			data={data}
+			status={status}
+			authData={restOfData}
+			authType={"Sign Up"}
+		/>
+	);
 };
 
 export default SignUp;
