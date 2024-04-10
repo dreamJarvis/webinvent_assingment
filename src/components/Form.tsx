@@ -1,7 +1,14 @@
 /** @format */
 import React from "react";
 
-const Form = ({ getUserInfo, setEmail, setPassword, authType }) => {
+const Form = ({
+	getUserInfo,
+	email,
+	setEmail,
+	password,
+	setPassword,
+	authType,
+}) => {
 	return (
 		<div className='login-form w-1/2 bg-slate-300 m-4 p-3'>
 			<form
@@ -15,12 +22,16 @@ const Form = ({ getUserInfo, setEmail, setPassword, authType }) => {
 						<input
 							className='m-2 p-2'
 							type='email'
+							data-testid='email-input'
 							placeholder='email'
+							value={email}
 							onChange={(e) => setEmail(e.target.value)}
 						/>
 						<input
 							className='m-2 p-2'
 							type='text'
+							data-testid='email-password'
+							value={password}
 							placeholder='password'
 							onChange={(e) => setPassword(e.target.value)}
 						/>

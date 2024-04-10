@@ -39,7 +39,9 @@ const FormAction = ({ userInfo, data, status, authData, authType }) => {
 	) : (
 		<Form
 			getUserInfo={getUserInfo}
+			email={email}
 			setEmail={setEmail}
+			password={password}
 			setPassword={setPassword}
 			authType={authType}
 		/>

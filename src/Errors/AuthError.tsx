@@ -24,7 +24,7 @@ const AuthError = ({ error, reset }) => {
 	});
 
 	return (
-		<div>
+		<div data-testid='error-msg'>
 			<div style={{ textAlign: "center" }}>
 				<h1>
 					{status} : {data?.error}

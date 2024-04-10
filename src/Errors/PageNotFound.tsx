@@ -16,7 +16,7 @@ import { useRouteError } from "react-router-dom";
 const PageNotFound = () => {
 	const err: any = useRouteError();
 	return (
-		<div>
+		<div data-testid='error-msg'>
 			<div style={{ textAlign: "center" }}>
 				<h1>
 					{err?.status} : {err?.statusText}
