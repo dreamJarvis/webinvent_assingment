@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/webinvent_assingment/static/css/main.8291fdca.css",
+    "main.js": "/webinvent_assingment/static/js/main.2a5ff7e0.js",
+    "index.html": "/webinvent_assingment/index.html",
+    "main.8291fdca.css.map": "/webinvent_assingment/static/css/main.8291fdca.css.map",
+    "main.2a5ff7e0.js.map": "/webinvent_assingment/static/js/main.2a5ff7e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8291fdca.css",
+    "static/js/main.2a5ff7e0.js"
+  ]
+}
