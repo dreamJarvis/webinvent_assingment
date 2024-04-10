@@ -9,7 +9,13 @@ const ProtectedRoute = ({ children }: { children: any; props: any }) => {
 	const location = useLocation();
 
 	if (authDetails?.token === null)
-		return <Navigate to={"/"} state={{ from: location }} replace />;
+		return (
+			<Navigate
+				to={"/webinvent_assingment"}
+				state={{ from: location }}
+				replace
+			/>
+		);
 	return children;
 };
 

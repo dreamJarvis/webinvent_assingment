@@ -8,13 +8,13 @@ const Header = () => {
 			<div className='flex items-center'>
 				<ul className='flex p-4 m-4'>
 					<li className='px-4'>
-						<Link to='/'>Sign In</Link>
+						<Link to='webinvent_assingment/'>Sign In</Link>
 					</li>
 					<li className='px-4'>
-						<Link to='/signup'>Sign Up</Link>
+						<Link to='webinvent_assingment/signup'>Sign Up</Link>
 					</li>
 					<li className='px-4'>
-						<Link to='/dashboard'>Dashboard</Link>
+						<Link to='webinvent_assingment/dashboard'>Dashboard</Link>
 					</li>
 				</ul>
 			</div>

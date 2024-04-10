@@ -1,6 +1,5 @@
 /** @format */
 
-import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -24,15 +23,15 @@ const appRouter = createBrowserRouter([
 		errorElement: <PageNotFound />,
 		children: [
 			{
-				path: "/",
+				path: "webinvent_assingment/",
 				element: <Login />,
 			},
 			{
-				path: "/signup",
+				path: "webinvent_assingment/signup",
 				element: <SignUp />,
 			},
 			{
-				path: "/dashboard",
+				path: "webinvent_assingment/dashboard",
 				element: (
 					<ProtectedRoute props={undefined}>
 						<Dashboard />

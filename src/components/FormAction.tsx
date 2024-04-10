@@ -48,7 +48,11 @@ const FormAction = ({
 	return isError ? (
 		<AuthError error={error} reset={reset} />
 	) : isSuccess ? (
-		<Navigate to='/dashboard' state={{ from: location }} replace />
+		<Navigate
+			to='/webinvent_assingment/dashboard'
+			state={{ from: location }}
+			replace
+		/>
 	) : (
 		<Form
 			getUserInfo={getUserInfo}
