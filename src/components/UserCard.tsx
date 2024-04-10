@@ -1,8 +1,9 @@
 /** @format */
 
 import React from "react";
+import { UserProfile } from "../services/types";
 
-const UserCard = ({ userData }) => {
+const UserCard = ({ userData }: { userData: UserProfile }) => {
 	const { avatar, email, first_name, last_name } = userData;
 	return (
 		<div className='flex flex-col items-center text-center justify-center shadow-transparent my-5 bg-pink-100 p-5  min-w-[30%] min-h-[40%] drop-shadow-lg rounded-md '>

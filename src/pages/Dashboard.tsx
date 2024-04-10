@@ -31,9 +31,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-/* 
-{
-    "email": "eve.holt@reqres.in",
-    "password": "pistol"
-}
-*/

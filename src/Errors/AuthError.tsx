@@ -10,7 +10,7 @@ import { ERROR_INTERVAL } from "../utils/constants";
 		status: 401
 	}
 */
-const AuthError = ({ error, reset }) => {
+const AuthError = ({ error, reset }: { error: any; reset: any }) => {
 	const { data, status } = error;
 
 	useEffect(() => {

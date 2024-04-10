@@ -7,8 +7,21 @@ import { addUserAuthData } from "../services/userData";
 import { User } from "../services/types";
 import AuthError from "../Errors/AuthError";
 import Form from "./Form";
+import { QueryStatus } from "@reduxjs/toolkit/query";
 
-const FormAction = ({ userInfo, data, status, authData, authType }) => {
+const FormAction = ({
+	userInfo,
+	data,
+	status,
+	authData,
+	authType,
+}: {
+	userInfo: any;
+	data: User | undefined;
+	status: QueryStatus;
+	authData: any;
+	authType: string;
+}) => {
 	const { isError, isSuccess, isLoading, error, reset } = authData;
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");

@@ -1,5 +1,6 @@
 /** @format */
-import React from "react";
+
+import { FormEventHandler } from "react";
 
 const Form = ({
 	getUserInfo,
@@ -8,6 +9,13 @@ const Form = ({
 	password,
 	setPassword,
 	authType,
+}: {
+	getUserInfo: FormEventHandler<HTMLFormElement>;
+	email: string;
+	setEmail: React.Dispatch<React.SetStateAction<string>>;
+	password: string;
+	setPassword: React.Dispatch<React.SetStateAction<string>>;
+	authType: string;
 }) => {
 	return (
 		<div className='login-form w-1/2 bg-slate-300 m-4 p-3'>

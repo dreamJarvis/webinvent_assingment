@@ -4,7 +4,7 @@ import { RootState } from "../store";
 import { useSelector } from "react-redux";
 import { Navigate, useLocation } from "react-router-dom";
 
-const ProtectedRoute = ({ children, ...props }) => {
+const ProtectedRoute = ({ children }: { children: any; props: any }) => {
 	const { authDetails } = useSelector((state: RootState) => state.userData);
 	const location = useLocation();
 

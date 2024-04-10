@@ -34,7 +34,7 @@ const appRouter = createBrowserRouter([
 			{
 				path: "/dashboard",
 				element: (
-					<ProtectedRoute>
+					<ProtectedRoute props={undefined}>
 						<Dashboard />
 					</ProtectedRoute>
 				),
