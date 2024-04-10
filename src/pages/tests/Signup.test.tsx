@@ -32,22 +32,4 @@ describe("log-in component", () => {
 		const passwordInput = screen.getByTestId("email-password");
 		expect(passwordInput).toBeInTheDocument();
 	});
-
-	// test("should render Register component correctly", () => {
-	// 	render(
-	// 		<Provider store={store}>
-	// 			<MemoryRouter initialEntries={["/"]}>
-	// 				<Login />
-	// 			</MemoryRouter>
-	// 		</Provider>
-	// 	);
-	// 	const emailInput = screen.getByTestId("email-input");
-	// 	userEvent.type(emailInput, "test@mail.com");
-
-	// 	console.log("emailInput : ", emailInput?.innerText);
-
-	// 	// expect(emailInput).toBeInTheDocument();
-	// 	expect(screen.getByTestId("email-input")).toHaveValue("test@mail.com");
-	// 	expect(screen.queryByTestId("error-msg")).not.toBeInTheDocument();
-	// });
 });
