@@ -1,16 +1,39 @@
 /** @format */
 
-import { RootState } from "../store";
-import React from "react";
-// import { useGetUserInfoMutation } from "../services/user";
-import { useSelector } from "react-redux";
+import { useGetUsersListQuery } from "../services/user";
+import AuthError from "../Errors/AuthError";
+import UserCard from "../components/UserCard";
+import { UserProfile } from "../services/types";
 
 const Dashboard = () => {
-	const { authDetails } = useSelector((state: RootState) => state.userData);
+	const { data, isLoading, isSuccess, refetch, status } =
+		useGetUsersListQuery(1);
 
-	console.log("authDetails : ", authDetails);
+	/* 
+		TODO: creat an query error type & component to hadle query errors
+	*/
+	// temp sol^n
+	const queryError = {
+		data: {
+			error: "error",
+		},
+		status: status,
+	};
 
-	return <div>Dashboard</div>;
+	if (isLoading) return <div>Loading...</div>;
+	return isSuccess ? (
+		data?.data?.map((user: UserProfile) => (
+			<UserCard key={user?.id.toString()} userData={user} />
+		))
+	) : (
+		<AuthError error={queryError} reset={refetch} />
+	);
 };
 
 export default Dashboard;
+/* 
+{
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+}
+*/

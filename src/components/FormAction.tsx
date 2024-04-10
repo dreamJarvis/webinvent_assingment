@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Navigate, useLocation } from "react-router-dom";
 import { addUserAuthData } from "../services/userData";

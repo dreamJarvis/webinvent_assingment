@@ -2,7 +2,14 @@
 
 import React, { useEffect } from "react";
 import { ERROR_INTERVAL } from "../utils/constants";
-
+/* 
+	error : {
+		data: {
+			error: '',
+		},
+		status: 401
+	}
+*/
 const AuthError = ({ error, reset }) => {
 	const { data, status } = error;
 

@@ -5,6 +5,7 @@ import FormAction from "../components/FormAction";
 
 const Login = () => {
 	const [userInfo, { data, status, ...restOfData }] = useGetUserInfoMutation();
+
 	return (
 		<FormAction
 			userInfo={userInfo}

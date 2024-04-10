@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 
 function App() {
 	return (
-		<div className='Container'>
+		<div className='flex flex-col items-center text-center justify-center'>
 			<Header />
 			<Outlet />
 		</div>

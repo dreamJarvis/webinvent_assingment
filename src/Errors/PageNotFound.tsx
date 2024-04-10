@@ -4,7 +4,7 @@ import React from "react";
 import { useRouteError } from "react-router-dom";
 
 /* 
-   TODO: create a error type for this error, and inherit the type below
+   TODO: create a route error type for this error, and inherit the type below
    {
       status: 401,
       statusText: "",

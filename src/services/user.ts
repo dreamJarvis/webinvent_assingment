@@ -17,9 +17,6 @@ export const userApi = createApi({
 	baseQuery: fetchBaseQuery({ baseUrl: "https://reqres.in/api/" }),
 	tagTypes: ["user"],
 	endpoints: (builder) => ({
-		// getUserInfo: builder.query<User, string>({
-		// 	query: (id) => `pokemon/${id}`,
-		// }),
 		getUserInfo: builder.mutation<User, any>({
 			query: (userInfo: User) => ({
 				url: `login`,
@@ -36,9 +33,17 @@ export const userApi = createApi({
 			}),
 			invalidatesTags: ["user"],
 		}),
+		getUsersList: builder.query<any, any>({
+			query: (id: Number) => `users?page=${id}`,
+			providesTags: ["user"],
+		}),
 	}),
 });
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetUserInfoMutation, useGetUserSignUpInfoMutation } = userApi;
+export const {
+	useGetUserInfoMutation,
+	useGetUserSignUpInfoMutation,
+	useGetUsersListQuery,
+} = userApi;
