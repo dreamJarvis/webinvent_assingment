@@ -20,11 +20,7 @@ export const userDataSlice = createSlice({
 				password: action.payload.password,
 				token: action.payload.token,
 			};
-
-			// console.log("action : ", action);
-			// console.log("newUserData : ", newUserData);
 			state.authDetails = { ...state.authDetails, ...newUserData };
-			// console.log("state.loginDetails : ", state.loginDetails);
 		},
 	},
 });

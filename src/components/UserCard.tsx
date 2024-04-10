@@ -1,6 +1,5 @@
 /** @format */
 
-import React from "react";
 import { UserProfile } from "../services/types";
 
 const UserCard = ({ userData }: { userData: UserProfile }) => {
